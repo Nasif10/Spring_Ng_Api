@@ -1,0 +1,33 @@
+<section class="py-4">
+	<div class="container">
+    <div class="mb-3">
+      <a href="#" routerLink="add-product">Create New</a>
+    </div>
+
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Category</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of products">
+          <th scope="row">{{ p.id }}</th>
+          <td>{{ p.name }}</td>
+          <td>{{ p.category }}</td>
+          <td>{{ p.description }}</td>
+          <td>{{ p.price }}</td>
+          <td style="text-align: center;">
+            <a role="button" [routerLink]="['edit-product', p.id]" class="px-2" >Edit</a>
+            <a role="button" href="" (click)="deleteProduct(p.id)">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

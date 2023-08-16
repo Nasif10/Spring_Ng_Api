@@ -1,0 +1,42 @@
+<section class="py-4">
+	<div class="container">
+        <h3>Create</h3>
+        <h6>Product</h6>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <form #f="ngForm" (ngSubmit)="addProduct()">
+                    <div class="mb-3 row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputName" name="name" [(ngModel)]="productReq.name">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputCategory" class="col-sm-2 col-form-label">Category</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputCategory" name="category" [(ngModel)]="productReq.category">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputDescription" name="description" [(ngModel)]="productReq.description">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputPrice" class="col-sm-2 col-form-label">Price</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="inputPrice" name="price" [(ngModel)]="productReq.price">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="inputSubmit" class="col-sm-2 col-form-label"></label>
+                        <div class="d-grid col-sm-10">
+                            <input class="btn btn-outline-primary" id="inputSubmit" name="submit" type="submit" value="Create" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>    
+    </div>
+</section>
